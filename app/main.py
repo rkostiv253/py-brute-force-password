@@ -29,8 +29,7 @@ def brute_single(hash_number: str):
 
 def brute_single_print(index: int, hash_number: str):
     result = brute_single(hash_number)
-    print(f"Result of task {index}: brute_single({hash_number}) = {result}")
-    print("-" * 100)
+    print(result)
 
 
 def brute_force_password(hashes_list) -> None:
@@ -52,7 +51,5 @@ def brute_force_password(hashes_list) -> None:
 
 
 if __name__ == "__main__":
-    start = time.perf_counter()
     brute_force_password(PASSWORDS_TO_BRUTE_FORCE)
-    sync_duration = time.perf_counter() - start
-    print(sync_duration)
+
