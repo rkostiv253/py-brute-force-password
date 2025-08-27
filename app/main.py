@@ -1,4 +1,5 @@
 import multiprocessing
+import time
 from hashlib import sha256
 
 
@@ -51,4 +52,7 @@ def brute_force_password(hashes_list) -> None:
 
 
 if __name__ == "__main__":
+    start = time.perf_counter()
     brute_force_password(PASSWORDS_TO_BRUTE_FORCE)
+    sync_duration = time.perf_counter() - start
+    print(sync_duration)
